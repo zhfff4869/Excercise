@@ -1,6 +1,7 @@
 import numpy as np
 import random
 
+#prim 是非NP问题，因为其复杂度是多项式级别的，对于多项式级别不能实现的问题称为NP问题，计算机对此种问题无法承受，只能求近似解
 
 class Prim:
     def update(self):
