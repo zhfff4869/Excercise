@@ -1,7 +1,7 @@
 package test;
 import java.util.Vector;
+//Chapter 5:number 2
 
-import test.test7;
 
 public class test8{
     public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class test8{
         Vector<Double> Split=getSplit(R);
         Vector<Double[][]> P=new Vector<>();
         for(Double i:Split){
-            Double[][] temp=test7.Rlamda1(R,i);
+            Double[][] temp=Rlamda1(R,i);
             P.add(temp);
         }
 
@@ -36,5 +36,50 @@ public class test8{
         Split.sort(null);;
 
         return Split;
+    }
+
+    public static Double[][] Rlamda1(Double[][] R, double lamda) {
+        Double[][] X = clone(R);
+        for (int i = 0; i < X.length; i++) {
+            for (int j = 0; j < X[i].length; j++) {
+                if (X[i][j] >= lamda)
+                X[i][j]=1.;
+                else
+                X[i][j]=0.;
+            }
+        }
+
+        return X;
+    }
+
+    public static Double[][] Rlamda2(Double[][] R, double lamda) {
+        Double[][] X = clone(R);
+        for (int i = 0; i < X.length; i++) {
+            for (int j = 0; j < X[i].length; j++) {
+                if (X[i][j] > lamda)
+                X[i][j]=1.;
+                else
+                X[i][j]=0.;
+            }
+        }
+
+        return X;
+    }
+
+    public static void printMatrix(Double[][] R){
+        for(Double[] i:R){
+            for(Double j:i)
+                System.out.printf("%5.1f",j);   //4.0f会自动做一个四舍五入
+            System.out.println();
+        }
+        System.out.println();
+    } 
+
+    public static Double[][] clone(Double[][] arr) {
+        Double[][] fuckthem = new Double[arr.length][arr[0].length];
+        for (int i = 0; i < arr.length; i++) {
+            fuckthem[i] = arr[i].clone();
+        }
+        return fuckthem;
     }
 }

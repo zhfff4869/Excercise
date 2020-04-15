@@ -1,5 +1,5 @@
 package test;
-
+//Chapter 5:number 1
 public class test7 {
     public static void main(String[] args) {
         Double[][] R = { { 0.7, 0.6, 0.5, 0.8 }, { 0.6, 0.9, 1., 0.8 }, { 0.7, 0.4, 0.3, 0.2 } };

@@ -1,6 +1,6 @@
 import java.util.*;
 public class E02{
-    public static void main(final String[] args) {
+    public static void main(String[] args) {
         int[] a = { 9, 5, 7, 8, 5, 6, 4 };
         // listsort(a);
         Arrays.parallelSort(a);
