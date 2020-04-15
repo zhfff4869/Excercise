@@ -1,10 +1,17 @@
 import numpy as np
+inf=np.inf
+W=np.array([
+    [0,0.5,2,1.5,inf,inf,inf],
+    [0.5,0,inf,inf,1.2,9.2,inf],
+    [2,inf,0,inf,5,inf,3.1],
+    [1.5,inf,inf,0,inf,inf,4],
+    [inf,1.2,5,inf,0,6.7,inf],
+    [inf,9.2,inf,inf,6.7,0,15.6],
+    [inf,inf,3.1,4,inf,15.6,0]
+    ])
 
-# print(np.full(shape=(3,5),fill_value=666.0))
-# print(np.arange(0,1.1,0.2))
-# # print(np.random.randn(2,10))
-# print(np.random.normal(2,10,size=(2,3)))
-R = np.array([[0, 1, np.inf, 4.5, 5], [1, 0, 3, np.inf, 2], [
-            np.inf, 3, 0, 10, 4], [4.5, np.inf, 10, 0, 2.5], [5, 2, 4, 2.5, 0]]) 
-
-print(R.shape)
+print(W.ndim)
+print(W[3,2])
+print("W"+str(1)+":\n")
+for iter in W:
+    print(iter)
